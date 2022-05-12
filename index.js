@@ -3,14 +3,14 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 app.use(bodyParser.json());
 app.use(cookieParser());
 require("./data/sudoku-db");
 
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: process.env.ORIGIN, credentials: true }));
 
 app.get("/", (req, res) => {
   res.json({ motd: "GO FONDLE A CACTUSES ERECTION" });
