@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const assert = require('assert')
 
-const url = 'mongodb://localhost/sudoku-db';
+const url = process.env.URI;
 
 mongoose.connect(
     url,
