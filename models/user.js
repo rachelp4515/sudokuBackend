@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 const userSchema = new Schema({
   username: { type: String, required: true },
   password: { type: String, select: false },
+  email: { type: String, required: true},
+  phone: { type: Number, required: true}
 });
 
 // Must use function expressions here! ES6 => functions do not bind this!
