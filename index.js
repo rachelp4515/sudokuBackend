@@ -13,7 +13,7 @@ require("./data/sudoku-db");
 app.use(cors({ origin: process.env.ORIGIN, credentials: true }));
 
 app.get("/", (req, res) => {
-  res.json({ motd: "GO FONDLE A CACTUSES ERECTION" });
+  res.json({ motd: "ssshhhhhh" });
 });
 
 app.post("/add", (req, res) => {
